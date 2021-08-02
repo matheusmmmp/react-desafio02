@@ -1,5 +1,10 @@
 import { render } from 'react-dom'
 
 import { App } from './App'
+import { GenresProvider } from './hooks/useSelectGenres'
 
-render(<App />, document.getElementById('root'))
+render(
+  <GenresProvider>
+  <App />
+  </GenresProvider>
+  , document.getElementById('root'))
